@@ -12,6 +12,7 @@ const data = [
   { team_id: 9, placing: 9, circuit_id: 7 },
   { team_id: 10, placing: 10, circuit_id: 5 },
   { team_id: 11, placing: 11, circuit_id: 2 },
+
   { team_id: 1, placing: 3, circuit_id: 3 },
   { team_id: 2, placing: 6, circuit_id: 2 },
   { team_id: 3, placing: 5, circuit_id: 5 },
@@ -22,7 +23,19 @@ const data = [
   { team_id: 8, placing: 11, circuit_id: 4 },
   { team_id: 9, placing: 1, circuit_id: 7 },
   { team_id: 10, placing: 2, circuit_id: 5 },
-  { team_id: 11, placing: 3, circuit_id: 2 }
+  { team_id: 11, placing: 3, circuit_id: 2 },
+
+  { team_id: 1, placing: 1, circuit_id: 11 },
+  { team_id: 2, placing: 2, circuit_id: 10 },
+  { team_id: 3, placing: 3, circuit_id: 9 },
+  { team_id: 6, placing: 4, circuit_id: 8 },
+  { team_id: 5, placing: 5, circuit_id: 7 },
+  { team_id: 4, placing: 6, circuit_id: 6 },
+  { team_id: 7, placing: 7, circuit_id: 5 },
+  { team_id: 8, placing: 8, circuit_id: 3 },
+  { team_id: 9, placing: 9, circuit_id: 4 },
+  { team_id: 10, placing: 10, circuit_id: 2 },
+  { team_id: 11, placing: 11, circuit_id: 1 }
   
 ]
  
