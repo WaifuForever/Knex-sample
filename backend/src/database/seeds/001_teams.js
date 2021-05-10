@@ -10,9 +10,17 @@ exports.seed = function(knex) {
       });
       console.log('doesnt exists')
       return knex('teams').insert([
-        { name: 'rowValue1' },
-        { name: 'rowValue2' },
-        { name: 'rowValue3' }
+        { name: 'team_01' },
+        { name: 'team_02' },
+        { name: 'team_03' },
+        { name: 'team_04' },
+        { name: 'team_05' },
+        { name: 'team_06' },
+        { name: 'team_07' },
+        { name: 'team_08' },
+        { name: 'team_09' },
+        { name: 'team_10' },
+        { name: 'team_11' }
       ]);
       
     }
@@ -22,9 +30,18 @@ exports.seed = function(knex) {
       return knex('teams').del().then(function() {
         // Inserts seed entries
         return knex('teams').insert([
-          { name: 'rowValue1' },
-          { name: 'rowValue2' },
-          { name: 'rowValue3' }
+          { name: 'team_01' },
+          { name: 'team_02' },
+          { name: 'team_03' },
+          { name: 'team_04' },
+          { name: 'team_05' },
+          { name: 'team_06' },
+          { name: 'team_07' },
+          { name: 'team_08' },
+          { name: 'team_09' },
+          { name: 'team_10' },
+          { name: 'team_11' }
+          
         ]);
        
       });
