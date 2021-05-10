@@ -4,7 +4,7 @@ exports.up = knex => knex.schema.createTable('pilots', table => {
     table.text('name').notNullable()
 
     table.integer('country_id').notNullable()
-    table.integer('dispute_id').notNullable()
+    table.integer('team_id').notNullable()
 
     table.timestamp('created_at').defaultTo(knex.fn.now())
     table.timestamp('updated_at').defaultTo(knex.fn.now())

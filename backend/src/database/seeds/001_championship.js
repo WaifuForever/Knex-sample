@@ -17,7 +17,7 @@ const data = [
  
 
 exports.seed = function(knex) {
-  return knex.schema.hasTable('disputes').then(function(exists) {
+  return knex.schema.hasTable('championship').then(function(exists) {
     if (!exists) {
       knex.schema.createTable('pilots', table => {
         table.increments('pilot_id')   
@@ -30,15 +30,15 @@ exports.seed = function(knex) {
         table.timestamp('updated_at').defaultTo(knex.fn.now())
       })
       console.log('doesnt exists')
-      return knex('disputes').insert(data);
+      return knex('championship').insert(data);
       
     }
     else {
       console.log('exists')
       // Deletes ALL existing entries
-      return knex('disputes').del().then(function() {
+      return knex('championship').del().then(function() {
         // Inserts seed entries
-        return knex('disputes').insert(data);
+        return knex('championship').insert(data);
        
       });
       
