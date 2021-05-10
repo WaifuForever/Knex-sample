@@ -7,15 +7,15 @@ const TeamController = require('./controllers/TeamController')
 
 routes.get('/', (req, res) => {
     return res.json("Hello World");
-
 });
 
-routes.get('/teams', (req, res) => {
-    TeamController.index()
-})
+routes.post('/teams', TeamController.store);
 
-routes.get('/pilots', (req, res) => {
-    PilotController.index()
-})
+routes.post('/pilots', PilotController.store);
+
+routes.get('/teams', TeamController.index);
+
+routes.get('/pilots', PilotController.index);
+
 
 module.exports = routes;
