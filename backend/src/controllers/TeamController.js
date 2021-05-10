@@ -2,23 +2,35 @@ const knex = require('../database')
 
 module.exports = {
     async store (req, res){
-       const { name } = req.body
-       await knex('teams').insert({
-           name
-        })
-        return res.json({message: "Team added!!"})
+       
+        try {
+            const {name } = req.body
+            console.log(req.body)
+
+            await knex('teams').insert({               
+                name: name
+    
+            })                
+
+            return res.status(201).json("Team added!!")
+        } catch (error) {
+            return res.json(error)
+        }
+       
     },
 
     async index(req, res){
         
-        await knex('teams').then((result) => {
-            console.log(result)
-            return res.json(result)
-        }).catch(err => {
+        try {
+            const results = await knex('teams')
+                   
+            return res.json(results)
+        } catch (err){
+            console.log(err)
             return res.json(
-                {message: "fail"}
+                {err: err, message: "Error"}
             )
-        })
+        }
     }
     
 
