@@ -1,17 +1,28 @@
 
 
 const data = [
-  { team_id: 1, placing: 1, pilots_id: [1, 2], circuits_id:[1, 2] },
-  { team_id: 2, placing: 2, pilots_id: [7, 8], circuits_id:[1, 2] },
-  { team_id: 3, placing: 3, pilots_id: [3, 4], circuits_id:[1, 2] },
-  { team_id: 6, placing: 4, pilots_id: [5, 6], circuits_id:[1, 2] },
-  { team_id: 5, placing: 5, pilots_id: [9, 10], circuits_id:[1, 2] },
-  { team_id: 4, placing: 6, pilots_id: [11, 1], circuits_id:[1, 2] },
-  { team_id: 7, placing: 7, pilots_id: [5, 2], circuits_id:[1, 2] },
-  { team_id: 8, placing: 8, pilots_id: [8, 3], circuits_id:[1, 2] },
-  { team_id: 9, placing: 9, pilots_id: [9, 4], circuits_id:[1, 2] },
-  { team_id: 10, placing: 10, pilots_id: [6, 10], circuits_id:[1, 2] },
-  { team_id: 11, placing: 11, pilots_id: [7, 11], circuits_id:[1, 2] }
+  { team_id: 1, placing: 1, circuit_id: 3 },
+  { team_id: 2, placing: 2, circuit_id: 2 },
+  { team_id: 3, placing: 3, circuit_id: 5 },
+  { team_id: 6, placing: 4, circuit_id: 6 },
+  { team_id: 5, placing: 5, circuit_id: 8 },
+  { team_id: 4, placing: 6, circuit_id: 9 },
+  { team_id: 7, placing: 7, circuit_id: 10 },
+  { team_id: 8, placing: 8, circuit_id: 4 },
+  { team_id: 9, placing: 9, circuit_id: 7 },
+  { team_id: 10, placing: 10, circuit_id: 5 },
+  { team_id: 11, placing: 11, circuit_id: 2 },
+  { team_id: 1, placing: 3, circuit_id: 3 },
+  { team_id: 2, placing: 6, circuit_id: 2 },
+  { team_id: 3, placing: 5, circuit_id: 5 },
+  { team_id: 6, placing: 7, circuit_id: 6 },
+  { team_id: 5, placing: 8, circuit_id: 8 },
+  { team_id: 4, placing: 9, circuit_id: 9 },
+  { team_id: 7, placing: 10, circuit_id: 10 },
+  { team_id: 8, placing: 11, circuit_id: 4 },
+  { team_id: 9, placing: 1, circuit_id: 7 },
+  { team_id: 10, placing: 2, circuit_id: 5 },
+  { team_id: 11, placing: 3, circuit_id: 2 }
   
 ]
  
