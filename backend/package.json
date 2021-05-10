@@ -1,0 +1,18 @@
+{
+  "name": "backend",
+  "version": "1.0.0",
+  "description": "Knexjs sample",
+  "main": "src/index.js",
+  "author": "Waifu_Forever",
+  "license": "MIT",
+  "scripts": {
+    "dev": "nodemon src/index.js"
+  },
+  "dependencies": {
+    "dotenv": "^9.0.1",
+    "express": "^4.17.1",
+    "knex": "^0.95.4",
+    "mysql2": "^2.2.5",
+    "nodemon": "^2.0.7"
+  }
+}
