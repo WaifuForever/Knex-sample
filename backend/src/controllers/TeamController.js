@@ -20,10 +20,11 @@ module.exports = {
     },
 
     async index(req, res){
-        
         try {
-            const results = await knex('teams')
-                   
+            if(_id)
+                const results = await knex('teams').where('team_id', id)
+            else
+                const results = await knex('teams')
             return res.json(results)
         } catch (err){
             console.log(err)
@@ -31,6 +32,7 @@ module.exports = {
                 {err: err, message: "Error"}
             )
         }
+        
     }
     
 
