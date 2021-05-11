@@ -14,10 +14,11 @@ routes.get('/teams', TeamController.index);
 
 
 routes.post('/pilots', PilotController.store);
-routes.post('/pilots', PilotController.store);
+routes.get('/pilots', PilotController.index);
 
 
-routes.get('/countries', CountryController.index);
 routes.post('/countries', CountryController.store);
+routes.get('/countries', CountryController.index);
+
 
 module.exports = routes;
