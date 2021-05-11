@@ -58,6 +58,8 @@ module.exports = {
     },
 
     async index(req, res){
+        const { _id } = req.query;
+
         try {
             if(_id)
                 const results = await knex('pilots').where('pilot_id', id)
@@ -72,6 +74,45 @@ module.exports = {
         }
         
 
+    },
+    
+    async update(req, res){
+        const { _id, name, country_id, team_id } = req.query
+
+        update = {}
+
+        if(_id){
+            if(name){
+                update.name = name;
+            }
+
+            if(country_id)
+                update.country_id = country_id
+
+            if(team_id)
+                update.team_id = team_id
+
+            try{
+                knex('pilots')
+                    .where('pilot_id', _id)
+                    .update(update)
+                return res.json("Team updated")
+            } catch(err) {
+                console.log(err)
+                return res.json(
+                    {err: err, message: "Error"}
+                )
+            }
+        } else{
+            return res.json(
+                {err: err, message: "BadRequest"}
+            )
+        }
+
+       
+
+
+       
     }
     
 

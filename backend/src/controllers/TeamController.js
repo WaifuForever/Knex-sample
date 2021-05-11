@@ -20,6 +20,8 @@ module.exports = {
     },
 
     async index(req, res){
+        const { _id } = req.query
+
         try {
             if(_id)
                 const results = await knex('teams').where('team_id', id)
@@ -33,7 +35,27 @@ module.exports = {
             )
         }
         
-    }
+    },
     
+    async update(req, res){
+        const { _id, name } = req.query
+
+        try{
+            knex('teams')
+                .where('team_id', _id)
+                .update({
+                    name: name
+                })
+            return res.json("Team updated")
+        } catch(err) {
+            console.log(err)
+            return res.json(
+                {err: err, message: "Error"}
+            )
+        }
+
+
+       
+    }
 
 };
