@@ -1,6 +1,6 @@
 import express from 'express';
 
-import TeamController from '../controller/team.controller';
+import TeamController from '../controllers/team.controller';
 
 //import TeamMiddleware from '../middleware/team.middleware';
 

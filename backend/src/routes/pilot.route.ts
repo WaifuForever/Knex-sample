@@ -1,6 +1,6 @@
 import express from 'express';
 
-import PilotController from '../controller/pilot.controller';
+import PilotController from '../controllers/pilot.controller';
 
 //import PilotMiddleware from '../middleware/pilot.middleware';
 

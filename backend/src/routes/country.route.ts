@@ -1,6 +1,6 @@
 import express from 'express';
 
-import CountryControler from '../controller/country.controller';
+import CountryControler from '../controllers/country.controller';
 
 //import CountryMiddleware from '../middleware/country.middleware';
 
