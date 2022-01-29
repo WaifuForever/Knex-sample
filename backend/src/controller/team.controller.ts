@@ -19,7 +19,7 @@ async function create(req: Request, res: Response) {
 async function findOne(req: Request, res: Response) {
     const { _id } = req.query;
     try {
-        const result = await knex('teams').where('team_id', _id?.toString());
+        const result = await knex('teams').where('_id', _id?.toString());
 
         return res.status(200).json(result);
     } catch (err) {
@@ -32,7 +32,7 @@ async function update(req: Request, res: Response) {
     const { _id, name } = req.body;
 
     try {
-        knex('teams').where('team_id', _id).update({
+        knex('teams').where('_id', _id).update({
             name: name,
         });
         return res.json('Team updated');
