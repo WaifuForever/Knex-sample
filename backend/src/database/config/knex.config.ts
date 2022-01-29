@@ -4,7 +4,7 @@ interface IKnexConfig {
 }
 
 const connection = `postgres://${process.env.DB_USER}:${process.env.DB_PASS}@${process.env.DB_HOST}:${process.env.DB_PORT}/`;
-
+console.log(connection)
 const config: IKnexConfig = {
     dev: {
         client: 'pg',
@@ -36,4 +36,4 @@ const config: IKnexConfig = {
     },
 };
 
-module.exports = config;
+export default config;
