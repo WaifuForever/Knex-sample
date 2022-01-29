@@ -2,19 +2,37 @@
   "name": "backend",
   "version": "1.0.0",
   "description": "Knexjs sample",
-  "main": "src/index.js",
+  "main": "src/index.ts",
   "author": "Waifu_Forever",
   "license": "MIT",
   "scripts": {
-    "dev": "nodemon src/index.js"
+    "knex:seed:make": "NODE_ENV=dev knex --knexfile src/database/knexfile.ts seed:make -x ts",
+    "knex:migrate:make": "NODE_ENV=dev knex --knexfile src/database/knexfile.ts migrate:make -x ts",
+    "knex:migrate:latest": "NODE_ENV=dev knex --knexfile src/database/knexfile.ts migrate:latest",
+    "knex:migrate:rollback": "NODE_ENV=dev knex --knexfile src/database/knexfile.ts migrate:rollback",
+    "start:dev": "NODE_ENV=dev tsnd --transpile-only --ignore-watch node_modules src/index.ts dotenv_config_path=./.env.dev",
+    "dc:up": "sudo docker-compose --env-file .env.dev up",
+    "dc:down": "sudo docker-compose --env-file .env.dev down",
+    "dc:deepdown": "yarn dc:delete:volumes && yarn dc:delete:postgres",
+    "dc:stop": "sudo docker-compose --env-file .env.dev stop",
+    "dc:delete:volumes": "sudo docker-compose --env-file .env.dev down -v",
+    "dc:delete:postgres": "sudo rm -rf postgres"
   },
   "dependencies": {
+    "@types/cors": "^2.8.12",
+    "cors": "^2.8.5",
     "dotenv": "^9.0.1",
     "express": "^4.17.1",
+    "express-rate-limit": "^6.2.0",
     "knex": "^0.95.4",
-    "mysql2": "^2.2.5"
+    "pg": "^8.7.1",
+    "uuid": "^8.3.2"
   },
   "devDependencies": {
-    "nodemon": "^2.0.7"
+    "@types/express": "^4.17.13",
+    "@types/node": "^17.0.13",
+    "@types/uuid": "^8.3.4",
+    "ts-node-dev": "^1.1.8",
+    "typescript": "^4.5.5"
   }
 }
