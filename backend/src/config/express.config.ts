@@ -1,14 +1,16 @@
 import express from 'express';
 import cors from 'cors';
 // import cookieParser from 'cookie-parser';
+
+import countryRoute from '../routes/country.route';
+import teamRoute from '../routes/team.route';
+import pilotRoute from '../routes/pilot.route';
 /*
-import authRoute from '../routes/authentication.route.js';
-import authorRoute from '../routes/author.route.js';
-import chapterRoute from '../routes/chapter.route.js';
 import mangaRoute from '../routes/manga.route.js';
 import reviewRoute from '../routes/review.route.js';
 import userRoute from '../routes/user.route.js';
 */
+
 import corsOptionsDelegate from './cors.config';
 import limiter from './limiter.config';
 
@@ -24,5 +26,8 @@ app.use('/files', express.static('uploads'));
 app.use(cors(corsOptionsDelegate));
 app.use(limiter); // limiting all requests
 //app.use(response);
+app.use('/countries', countryRoute);
+app.use('/pilots', pilotRoute);
+app.use('/teams', teamRoute);
 
 export { app };
