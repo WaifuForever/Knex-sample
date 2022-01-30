@@ -9,7 +9,7 @@
     "knex:seed:make": "NODE_ENV=dev knex --knexfile src/database/config/migration.config.ts seed:make -x ts",
     "knex:migrate:make": "NODE_ENV=dev knex --knexfile src/database/config/migration.config.ts migrate:make -x ts",
     "knex:migrate:latest": "NODE_ENV=dev knex --knexfile src/database/config/migration.config.ts migrate:latest",
-    "knex:migrate:rollback": "NODE_ENV=dev knex --knexfile src/database/config/migration.config.ts migrate:rollback dotenv_config_path=./.env.dev",
+    "knex:migrate:rollback": "NODE_ENV=dev knex --knexfile src/database/config/migration.config.ts migrate:rollback",
     "start:dev": "NODE_ENV=dev ts-node-dev --transpile-only --ignore-watch node_modules src/index.ts dotenv_config_path=./.env.dev",
     "dc:up": "sudo docker-compose --env-file .env.dev up",
     "dc:down": "sudo docker-compose --env-file .env.dev down",

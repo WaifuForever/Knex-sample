@@ -1,11 +1,6 @@
 import { Knex } from 'knex';
 import * as dotenv from 'dotenv';
-dotenv.config({ path: '.env.dev' });
-
-const extension =
-    process.env.NODE_ENV === 'prod' || process.env.NODE_ENV === 'dev'
-        ? 'js'
-        : 'ts';
+dotenv.config({ path: `../../../.env.${process.env.NODE_ENV}` });
 
 interface IKnexConfig {
     [key: string]: Knex.Config;
@@ -19,8 +14,6 @@ const config: IKnexConfig = {
         connection: connection + `${process.env.DB_NAME}`,
         migrations: {
             directory: '../migrations',
-            disableMigrationsListValidation: true,
-            loadExtensions: [`.${extension}`],
         },
         seeds: { directory: '../seeds' },
         debug: true,
