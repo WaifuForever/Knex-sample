@@ -10,9 +10,9 @@ const config: IKnexConfig = {
         client: 'pg',
         connection: connection + `${process.env.DB_NAME}`,
         migrations: {
-            directory: './migrations',
+            directory: '../migrations',
         },
-        seeds: { directory: './seeds' },
+        seeds: { directory: '../seeds' },
         debug: true,
     },
 
@@ -20,9 +20,9 @@ const config: IKnexConfig = {
         client: 'pg',
         connection: connection + `${process.env.DB_TEST_NAME}`,
         migrations: {
-            directory: './migrations',
+            directory: '../migrations',
         },
-        seeds: { directory: './seeds' },
+        seeds: { directory: '../seeds' },
         debug: true,
     },
 
@@ -30,9 +30,9 @@ const config: IKnexConfig = {
         client: 'pg',
         connection: connection + `${process.env.DB_NAME}`,
         migrations: {
-            directory: './migrations',
+            directory: '../migrations',
         },
-        seeds: { directory: './seeds' },
+        seeds: { directory: '../seeds' },
     },
 };
 
